@@ -20,7 +20,7 @@ public class HomeworkOneIoInput {
 
 	// monthsToYears method takes an input of months and converts it to years
 	public static int monthsToYears(int months) {
-		return months / 12;
+		return months / 12; // integar division
 	} // end method
 
 
