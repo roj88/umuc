@@ -1,14 +1,15 @@
-/**
-    * Print "Happy Birthday!" to standard output.
-    */
-   public class Test1
-   {
-   public static void main (String[] args) {
-int var1 = 9;
-int var2 = 12;
-int var3 = 12;
+/*
+* File: DeBUGMe.java
+* Author: Joan Rush
+* Date: June 28, 2018
+* Purpose: This program demonstrates the ability to create functioning code.
+*/
 
-System.out.println(var2 == var3);
-
-   }
+import java.util.Random;
+public class Test1{
+  public static void main(String args[]){            
+      int momAge = 62;
+      int dadAge = 64;      
+      System.out.println(Math.max(momAge, dadAge) + Math.min(momAge, dadAge));
+}
 }
