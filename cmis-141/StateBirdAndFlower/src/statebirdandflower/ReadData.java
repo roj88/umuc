@@ -1,6 +1,6 @@
 package statebirdandflower;
 
-/**
+/*
  * filename: ReadData.java
  * author: roland carter
  * date: 2018-08-03
@@ -38,7 +38,7 @@ public class ReadData {
         // while creates an array from each line and splits it on the ","
         while((line=br.readLine())!=null){
             String str[] = line.split(",");
-                map.put(str[0], str[1]);
+                map.put(str[0].toLowerCase(), str[1]);
             }
         return map; // return a <String,String> hashmap
     } // end csvIntoHash
