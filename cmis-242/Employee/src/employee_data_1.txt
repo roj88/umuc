@@ -1,0 +1,12 @@
+2014 Employee Coltrane,Alice 2300
+2015 Salesman Holiday,Billie 3200 100000
+2014 Executive Carter,James 5300 71
+2014 Employee Glasper,Robert 2900
+2014 Salesman Alexander,Eric 1800 102000
+2014 Salesman Harper,Billy 2400 8300
+2014 Employee Flanagan,Tommy 2300
+2014 Salesman Hill,Andrew 1300 43000
+2015 Executive Henderson,Joe 8200 51
+2015 Employee Tyner,McCoy 4300
+2015 Salesman Berg,Bob 4300 57000
+2014 Executive Haynes,Roy 8900 75

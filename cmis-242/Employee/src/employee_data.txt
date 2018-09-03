@@ -1,0 +1,12 @@
+2014 Employee Coltrane,John 2500
+2015 Salesman Taylor,Billie 2900 100000
+2014 Executive Cables,George 4500 49
+2015 Employee Davis,Miles 2400
+2014 Salesman Parker,Charlie 2300 90000
+2015 Salesman Vaughn,Sarah 7500 89000
+2014 Employee McDuff,Jack 2000
+2014 Salesman Holiday,Billie 3000 55000
+2014 Executive Roach,Max 4300 51
+2015 Employee Monk,Thelonious 2000
+2015 Salesman Hancock,Herbie 3000 70000
+2014 Executive Rollins,Sonny 5000 75

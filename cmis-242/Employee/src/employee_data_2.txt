@@ -1,0 +1,12 @@
+2014 Employee Adderly,Cannonball 1800
+2015 Salesman Powell,Bud 2900 170000
+2014 Executive Carter,Ron 4900 49
+2015 Employee Shorter,Wayne 1900
+2014 Salesman Thompson,Lucky 1700 130000
+2015 Salesman Mobley,Hank 7500 91000
+2014 Employee Horn,Shirley 3900
+2014 Salesman Jones,Joe 2000 55000
+2014 Executive Williams,Tony 6500 51
+2015 Employee Benson,George 1700
+2015 Salesman Griffin,Johnny 2100 87000
+2014 Executive Hicks,John 4300 61
