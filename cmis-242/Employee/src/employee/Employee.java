@@ -18,7 +18,7 @@ class Employee {
     public Employee (String fullName, int monthlySalary){
         this.fullName = fullName;
         this.monthlySalary = monthlySalary;
-}
+    }
     // setter methods
     public void setFullName(String fullName){
         this.fullName = fullName;

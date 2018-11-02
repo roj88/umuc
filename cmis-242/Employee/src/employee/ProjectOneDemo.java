@@ -33,7 +33,9 @@ public class ProjectOneDemo {
 
     // while loop creates an array from each line and splits it on the " "
     while((line=br.readLine())!=null){
-        content.add(line.split(" "));
+        if(line.split(" ").length>1){ // this if-statement was added to deal with \n
+            content.add(line.split(" "));
+            }
         }
     
     return content; // return final List<String[]>
@@ -43,7 +45,7 @@ public class ProjectOneDemo {
     public static void main(String args[]) throws IOException{
         
         // declare file path constant 
-        final String FILE_PATH = "/Users/rolandcarter/github-repos/umuc/cmis-242/Employee/src/employee_data.txt";
+        final String FILE_PATH = "/Users/rolandcarter/github-repos/umuc/cmis-242/Employee/src/employee/Week2TestData.txt";
         
         // create list from txtIntoList() static method
         List<String[]> readInData = txtIntoList(FILE_PATH);
