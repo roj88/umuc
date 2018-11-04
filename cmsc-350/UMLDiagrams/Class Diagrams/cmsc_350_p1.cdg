@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="cmsc_350_p1">
+  <ClassDiagramComponents>
+    <Class name="DivideByZero" package="infixexpression" visibility="public" xPosition="607.0" yPosition="479.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="DivideByZero" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CatchErrors" package="infixexpression" visibility="public" xPosition="422.0" yPosition="479.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="CatchErrors" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="InfixExpressionEval" package="infixexpression" visibility="public" xPosition="28.0" yPosition="131.0">
+      <Fields>
+        <Field name="operandStack" type="Stack" visibility="private" isStatic="true"/>
+        <Field name="operatorStack" type="Stack" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="infixEvaluation" returnType="String" visibility="public">
+          <Argument type="String" name="userInput"/>
+        </Method>
+        <Method name="stringToOperator" returnType="int" visibility="private" isStatic="true">
+          <Argument type="String" name="operator"/>
+          <Argument type="int" name="op1"/>
+          <Argument type="int" name="op2"/>
+        </Method>
+        <Method name="operatorPrecedence" returnType="String" visibility="private" isStatic="true">
+          <Argument type="String" name="operator"/>
+        </Method>
+        <Method name="isOperator" returnType="String" visibility="private" isStatic="true">
+          <Argument type="String" name="value"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="InfixExpression" package="infixexpression" visibility="public" xPosition="507.0" yPosition="101.0">
+      <Fields>
+        <Field name="jFrame" type="JFrame" visibility="private" isFinal="true"/>
+        <Field name="panel" type="JPanel" visibility="private" isFinal="true"/>
+        <Field name="userInput" type="JTextField" visibility="private" isFinal="true"/>
+        <Field name="result" type="JTextField" visibility="private" isFinal="true"/>
+        <Field name="evaluate" type="JButton" visibility="private" isFinal="true"/>
+        <Field name="userInputLabel" type="JLabel" visibility="private" isFinal="true"/>
+        <Field name="resultLabel" type="JLabel" visibility="private" isFinal="true"/>
+        <Field name="blank" type="JLabel" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="InfixExpression" returnType="void" visibility="public"/>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation name="infixEvaluation" source="infixexpression.InfixExpressionEval" target="infixexpression.InfixExpression" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="." source="infixexpression.DivideByZero" target="infixexpression.InfixExpression" type="Default" sourceCardinality="0..1" targetCardinality="0..1"/>
+    <HasRelation name="." source="infixexpression.CatchErrors" target="infixexpression.InfixExpression" type="Default" sourceCardinality="0..1" targetCardinality="0..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

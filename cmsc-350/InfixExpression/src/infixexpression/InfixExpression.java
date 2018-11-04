@@ -2,7 +2,7 @@
  * filename: InfixExpression.java
  * author: roland carter
  * date: 2018-11-01
- * purpose: cmis 350 project 1
+ * purpose: cmsc 350 project 1
 */
 
 package infixexpression;
@@ -10,8 +10,12 @@ package infixexpression;
 // import libraries
 import java.awt.*;
 import java.awt.event.*;
+import java.util.EmptyStackException;
 import javax.swing.*;
 
+
+// InfixExpression creates a GUI and uses InfixExpressionEval to
+// calculate an infix expression
 public class InfixExpression implements ActionListener {
     // define JFrame variables
     private final JFrame jFrame;
@@ -71,12 +75,25 @@ public class InfixExpression implements ActionListener {
         
         valueInput = userInput.getText();
         
-        JOptionPane.showMessageDialog(null, "Your answer is " + valueInput + ".");
-        
+        try {
+            result.setText("" + InfixExpressionEval.infixEvaluation(valueInput));
+        } 
+        catch (CatchErrors e1) {
+            JOptionPane.showMessageDialog(null, e1.getMessage());
+        } 
+        catch (DivideByZero e2) {
+            JOptionPane.showMessageDialog(null, e2.getMessage());
+        }
+        catch (EmptyStackException e3) {
+            JOptionPane.showMessageDialog(null, "Please enter a valid expression.");
+        }
     }
     
+    // begin main method
     public static void main(String[] args) {
         new InfixExpression();
     }
     
-}
+} // end InfixExpression class
+
+// (2 + 3 * 5) -8/5*(5-2)
