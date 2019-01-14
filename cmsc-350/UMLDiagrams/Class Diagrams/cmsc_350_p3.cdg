@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Project2">
+  <ClassDiagramComponents>
+    <Class name="Node" package="" visibility="public" xPosition="63.0" yPosition="316.0">
+      <Fields>
+        <Field name="value" type="T" visibility="private"/>
+        <Field name="right" type="Node" visibility="private"/>
+        <Field name="left" type="Node" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Node" returnType="T" visibility="public">
+          <Argument type="T" name="value"/>
+        </Method>
+        <Method name="getValue" returnType="T" visibility="public"/>
+        <Method name="setValue" returnType="T" visibility="public">
+          <Argument type="T" name="value"/>
+        </Method>
+        <Method name="getRight" returnType="Node" visibility="public"/>
+        <Method name="getLeft" returnType="Node" visibility="public"/>
+        <Method name="setRight" returnType="Node" visibility="public">
+          <Argument type="Node" name="right"/>
+        </Method>
+        <Method name="setLeft" returnType="Node" visibility="public">
+          <Argument type="Node" name="left"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="BinarySearchTree" package="" visibility="public" xPosition="86.0" yPosition="46.0">
+      <Fields>
+        <Field name="resultString" type="StringBuilder" visibility="private"/>
+        <Field name="root" type="Node&lt;T&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="BinarySearchTree" returnType="void" visibility="public"/>
+        <Method name="insert" returnType="T" visibility="public">
+          <Argument type="T" name="value"/>
+        </Method>
+        <Method name="recusiveInsertion" returnType="T" visibility="private">
+          <Argument type="Node&lt;T&gt;" name="currentNode"/>
+          <Argument type="T" name="value"/>
+        </Method>
+        <Method name="inOrder" returnType="Node" visibility="private">
+          <Argument type="Node" name="root"/>
+        </Method>
+        <Method name="getAscendingOrder" returnType="String" visibility="public"/>
+        <Method name="getDescendingOrder" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="SortGUI" package="" visibility="public" xPosition="553.0" yPosition="7.0">
+      <Fields>
+        <Field name="jFrame" type="JFrame" visibility="private"/>
+        <Field name="panel" type="JPanel" visibility="private"/>
+        <Field name="originalList" type="JTextField" visibility="private"/>
+        <Field name="sortedList" type="JTextField" visibility="private"/>
+        <Field name="performSort" type="JButton" visibility="private"/>
+        <Field name="ascendingButton" type="JRadioButton" visibility="private"/>
+        <Field name="descendingButton" type="JRadioButton" visibility="private"/>
+        <Field name="integerButton" type="JRadioButton" visibility="private"/>
+        <Field name="fractionButton" type="JRadioButton" visibility="private" isFinal="true"/>
+        <Field name="originalListLabel" type="JLabel" visibility="private" isFinal="true"/>
+        <Field name="sortedListLabel" type="JLabel" visibility="private"/>
+        <Field name="blank" type="JLabel" visibility="private"/>
+        <Field name="sortOrderLabel" type="JLabel" visibility="private"/>
+        <Field name="numericTypeLabel" type="JLabel" visibility="private"/>
+        <Field name="sortOrder" type="ButtonGroup" visibility="private"/>
+        <Field name="numericType" type="ButtonGroup" visibility="private"/>
+        <Field name="WINDOW_WIDTH" type="int" visibility="private"/>
+        <Field name="WINDOW_HEIGHT" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="SortGUI" returnType="void" visibility="public"/>
+        <Method name="actionPerformed" returnType="ActionEvent" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CatchErrors" package="" visibility="public" xPosition="616.0" yPosition="491.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="CatchErrors" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Fraction" package="" visibility="public" xPosition="270.0" yPosition="341.0">
+      <Fields>
+        <Field name="value" type="Double" visibility="private"/>
+        <Field name="numerator" type="int" visibility="private"/>
+        <Field name="denominator" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Fraction" returnType="void" visibility="public">
+          <Argument type="String" name="value"/>
+        </Method>
+        <Method name="getValue" returnType="Double" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="compareTo" returnType="int" visibility="public">
+          <Argument type="Fraction" name="fraction"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation name="" source="Fraction" target="BinarySearchTree" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="Fraction" target="SortGUI" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="Node" target="BinarySearchTree" sourceCardinality="0..1" targetCardinality="0..1"/>
+    <UseRelation name="" source="CatchErrors" target="SortGUI" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="BinarySearchTree" target="SortGUI" sourceCardinality="0..1" targetCardinality="0..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

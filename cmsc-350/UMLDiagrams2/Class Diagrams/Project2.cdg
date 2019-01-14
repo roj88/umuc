@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Project2">
+  <ClassDiagramComponents>
+    <Class name="Operands" package="" visibility="public" xPosition="766.0" yPosition="201.0">
+      <Fields>
+        <Field name="value" type="String" visibility="private" isFinal="true"/>
+        <Field name="untitledField" type="Object" visibility="private"/>
+        <Field name="untitledField1" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Operands" returnType="void" visibility="public"/>
+        <Method name="inWalk" returnType="String" visibility="public"/>
+        <Method name="postWalk" returnType="String" visibility="public"/>
+        <Method name="post" returnType="void" visibility="public" isAbstract="true"/>
+      </Methods>
+    </Class>
+    <Class name="Node" package="" visibility="public" xPosition="473.0" yPosition="429.0">
+      <Fields>
+        <Field name="right" type="Node" visibility="private"/>
+        <Field name="left" type="Node" visibility="private"/>
+        <Field name="value" type="T" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Node" returnType="void" visibility="public">
+          <Argument type="T" name="value"/>
+        </Method>
+        <Method name="getValue" returnType="T" visibility="public"/>
+        <Method name="setValue" returnType="void" visibility="public">
+          <Argument type="String" name="operator"/>
+        </Method>
+        <Method name="getRight" returnType="T" visibility="public"/>
+        <Method name="getLeft" returnType="T" visibility="public"/>
+        <Method name="setRIght" returnType="void" visibility="public"/>
+        <Method name="setLeft" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="BinarySearchTree" package="" visibility="public" xPosition="8.0" yPosition="429.0">
+      <Fields>
+        <Field name="resultString" type="StringBuilder" visibility="private"/>
+        <Field name="root" type="Node&lt;T&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="insert" returnType="T" visibility="public">
+          <Argument type="T" name="value"/>
+        </Method>
+        <Method name="recusiveInsertion" returnType="T" visibility="private">
+          <Argument type="Node&lt;T&gt;" name="currentNode"/>
+          <Argument type="T" name="value"/>
+        </Method>
+        <Method name="inOrder" returnType="Node" visibility="private">
+          <Argument type="Node" name="root"/>
+        </Method>
+        <Method name="getAscendingOrder" returnType="String" visibility="public"/>
+        <Method name="getDescendingOrder" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PostfixGUI" package="" visibility="public" xPosition="342.0" yPosition="-27.0">
+      <Fields>
+        <Field name="jFrame" type="JFrame" visibility="private"/>
+        <Field name="panel" type="JPanel" visibility="private"/>
+        <Field name="originalList" type="JTextField" visibility="private"/>
+        <Field name="sortedList" type="JTextField" visibility="private"/>
+        <Field name="performSort" type="JButton" visibility="private"/>
+        <Field name="originalListLabel" type="JLabel" visibility="private"/>
+        <Field name="sortedListLabel" type="JLabel" visibility="private"/>
+        <Field name="blank" type="JLabel" visibility="private"/>
+        <Field name="WINDOW_WIDTH" type="int" visibility="private" isFinal="true"/>
+        <Field name="WINDOW_HEIGHT" type="int" visibility="private" isFinal="true"/>
+        <Field name="sortOrderLabel" type="JLabel" visibility="private"/>
+        <Field name="numericTypeLabel" type="JLabel" visibility="private"/>
+        <Field name="sortOrder" type="ButtonGroup" visibility="private"/>
+        <Field name="numericType" type="ButtonGroup" visibility="private"/>
+        <Field name="ascendingButton" type="JRadioButton" visibility="private"/>
+        <Field name="descendingButton" type="JRadioButton" visibility="private"/>
+        <Field name="integerButton" type="JRadioButton" visibility="private"/>
+        <Field name="fractionButton" type="JRadioButton" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="SortingGUI" returnType="void" visibility="public"/>
+        <Method name="actionPerformed" returnType="ActionEvent" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CatchErrors" package="" visibility="public" xPosition="729.0" yPosition="36.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="CatchErrors" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation name="" source="Node" target="BinarySearchTree" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="CatchErrors" target="PostfixGUI" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="BinarySearchTree" target="PostfixGUI" sourceCardinality="0..1" targetCardinality="0..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
